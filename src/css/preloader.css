@@ -21,8 +21,8 @@
 	position: relative;
 	margin: auto;
 
-  width: calc(var(--length) + var(--thickness));
-  height: calc((var(--length) + 3*var(--thickness)) * var(--sin60));
+	width: calc(var(--length) + var(--thickness));
+	height: calc((var(--length) + 3*var(--thickness)) * var(--sin60));
 }
 
 .penrose-line {
@@ -32,8 +32,8 @@
 }
 
 .penrose-line > div {
-  position: absolute;
-  bottom: 0;
+	position: absolute;
+	bottom: 0;
 }
 
 .penrose-line:nth-child(1) { 

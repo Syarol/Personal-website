@@ -122,6 +122,9 @@ inpageLink.map(el => el.onclick = e => {
 
 
 window.onload = e => {
+	/*removes preloader when page is loaded*/
+	document.getElementsByClassName('preloader-wrapper')[0].remove();
+
 	/*if page open not from top then "stick" header to top of page*/
 	if (window.pageYOffset > 0) headerState(header, true, false);
 };
@@ -148,5 +151,7 @@ document.getElementsByClassName('sidebar-close-btn')[0].onclick = () => {
 	document.body.classList.remove('scroll-disabled');
 };
 
-/*Saves email address to clipboard*/
-document.getElementsByClassName('copy-email-btn')[0].onclick = () => navigator.clipboard.writeText('oleh.yaroshchuk@yahoo.com');
+if (document.getElementsByClassName('home-main')[0]) {
+	/*Saves email address to clipboard*/
+	document.getElementsByClassName('copy-email-btn')[0].onclick = () => navigator.clipboard.writeText('oleh.yaroshchuk@yahoo.com');
+}
