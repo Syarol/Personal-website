@@ -1,1 +1,1 @@
-web: npm start_cloud
+web: npm start

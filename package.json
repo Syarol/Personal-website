@@ -15,10 +15,10 @@
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-minify": "^3.1.0",
-    "gulp-rename": "^1.4.0",
-    "dotenv": "^8.0.0"
+    "gulp-rename": "^1.4.0"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.17.1"
   }
 }
