@@ -24,12 +24,12 @@ function minifyCSS() {
 
 //minify HTML files
 function minifyHTML() {
-  return gulp.src(['./src/*.html', '!./src/*.min.html', './src/html/*.html', '!./src/html/*.min.html'])
+  return gulp.src(['./src/html/*.html', '!./src/html/*.min.html'])
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(rename({
         suffix: '.min'
     }))
-    .pipe(gulp.dest('./src/'));
+    .pipe(gulp.dest('./src/html/'));
 }
 
 //minify JS files
@@ -45,7 +45,7 @@ function minifyJS() {
 //watches files for changes
 function watchAll(){
 	gulp.watch(['./src/css/*.css', '!./src/css/*.min.css'], gulp.series(minifyCSS));
-  gulp.watch(['./src/*.html', '!./src/*.min.html', './src/html/*.html', '!./src/html/*.min.html'], gulp.series(minifyHTML));
+  gulp.watch(['./src/html/*.html', '!./src/html/*.min.html'], gulp.series(minifyHTML));
   gulp.watch(['./src/js/*.js', '!./src/js/*.min.js'], gulp.series(minifyJS));
 }
 

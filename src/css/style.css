@@ -215,7 +215,8 @@ main {
 	flex: 1 0 auto;
 }
 
-.about-main {
+.about-main,
+.projects-main {
 	padding-top: 60px;
 }
 
