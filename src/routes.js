@@ -2,8 +2,15 @@
   * Dependencies
 **/
 
+const pug = require('pug');
 const path = require('path');
 const router = require('express').Router();
+
+/**
+ * Precompile pages for faster loading
+**/
+
+pug.compileFile(path.join(__dirname + '/views/projects.pug'));
 
 /**
   * Routes
@@ -19,7 +26,7 @@ router.get('/about', function(req, res){
 });
 
 router.get('/projects', function(req, res){
-  res.sendFile(path.join(__dirname + '/html/projects.html'));
+  res.render(path.join(__dirname + '/views/projects.pug'));
 });
 
 router.get('/contact', function(req, res){

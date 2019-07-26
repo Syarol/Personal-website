@@ -1,0 +1,18 @@
+.sidebar.sidebar-hidden
+  header.sidebar-header
+    span.sidebar-title Oleh Yaroshchuk
+    span.sidebar-close-btn(data-tooltip='Close')
+      i.fas.fa-times
+  .sidebar-container
+    span
+      a(href='/') Home
+    span
+      a(href='/about') About
+    span
+      a(href='/projects') Projects
+    span
+      a(href='/contact') Contact
+    .mode-switch-wrapper(data-tooltip='Click to change mode')
+      label.mode-switch(for='checkbox')
+        input#checkbox.mode-switch-input(type='checkbox')
+        .slider.round
