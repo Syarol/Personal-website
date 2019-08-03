@@ -10,8 +10,8 @@
   --bg-color-alt: #efeeed;
   --logo-font: 'Russo One', sans-serif;
   --nav-font: 'Merriweather Sans', sans-serif;
-  --mode-glyph: "";
-  --mode-glyph-color: #f9d71c;
+  --mode-symbol: "\f185";
+  --mode-symbol-color: #f9d71c;
   --entry-section-bg: url(../img/entry-section-day.jpg);
   --entry-section-btn-color: #53657e;
   --titles-font: 'Ropa Sans', sans-serif;
@@ -33,8 +33,8 @@
   --header-bg-color: #1d1d29;
   --bg-color: #161625;
   --bg-color-alt: #1b1b32;
-  --mode-glyph: "";
-  --mode-glyph-color: #C0C0C0;
+  --mode-symbol: "\f186";
+  --mode-symbol-color: #C0C0C0;
   --entry-section-bg: url(../img/entry-section-night.jpg);
   --entry-section-btn-color: #7e5453;
   --btn-rev-color: #F2F6ED;
@@ -55,9 +55,9 @@ body, html {
 
 body {
 	background-color: var(--bg-color);
-  color: var(--font-color);
+	color: var(--font-color);
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 }
 
 .scroll-disabled {
@@ -79,10 +79,13 @@ a {
 	cursor: pointer;
 }
 
-.btn:hover {
-	color: var(--bg-color);
-	background-color: var(--btn-rev-color);
-	opacity: .85;
+/*Works only on non-touch devices */
+@media (any-hover: hover) and (pointer: fine) {
+	.btn:hover {
+		color: var(--bg-color);
+		background-color: var(--btn-rev-color);
+		opacity: .85;
+	}
 }
 
 /**
@@ -167,8 +170,8 @@ a {
 	background-color: #fff;
 	bottom: 4px;
 	font-family: "Font Awesome 5 Free Solid";
-	color: var(--mode-glyph-color);
-	content: var(--mode-glyph);
+	color: var(--mode-symbol-color);
+	content: var(--mode-symbol);
 	height: 26px;
 	left: 4px;
 	position: absolute;
@@ -682,14 +685,14 @@ main {
 		font-size: .75rem;
 		white-space: nowrap;
 		bottom: calc(-100% - 2px);
-	  border-radius: 2px;
-	  line-height: initial;
-	  left: 50%;
-	  width: auto;
-	  transform: translateX(-50%);
-	  opacity: 0;
-	  transition: all .3s ease;
-	  visibility: hidden;
+		border-radius: 2px;
+		line-height: initial;
+		left: 50%;
+		width: auto;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: all .3s ease;
+		visibility: hidden;
 	}
 }
 
