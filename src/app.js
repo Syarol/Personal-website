@@ -11,4 +11,4 @@ const router = require('./routes.js');
 app.use(express.static(__dirname));
 app.use(router);
 
-app.listen(process.env.PORT || port);
+app.listen(process.env.PORT || port); //started server listening

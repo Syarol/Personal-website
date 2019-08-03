@@ -9,5 +9,7 @@
 **/
 
 module.exports = {
-  port: process.env.PORT
+  port: process.env.PORT,
+  url: process.env.DB_URL, //db connection url
+  dbName: process.env.DB_NAME
 };

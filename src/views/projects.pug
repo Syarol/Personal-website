@@ -10,7 +10,18 @@ main.projects-main
 		hr.divider
 		p There are some of my works. They are not great, but not terrible (I hope so). Please, take a look at them.
 	section.projects-list
-		- var values = [1, 2, 3, 4, 5];
+		each item in projects
+			div.projects-list-item
+				img.projects-list-item-img(src= item.thumbnailURL)
+				h3.project-title= item.title
+				ul.project-tags-list 
+					each tag in item.tags
+						li= tag
+				p.project-description= item.description
+				span.link.text-link
+					a(href= item.url) Take a look 
+					.link-underline
+		- var values = [1, 2, 3];
 			each val in values
 				div.projects-list-item
 					img.projects-list-item-img(src="img/project-template-2.jpg")

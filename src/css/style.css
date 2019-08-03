@@ -934,7 +934,6 @@ main {
 	}
 
 	.projects-list-item-img {
-		width: 100%;
 		height: auto;
 		grid-row-end: 2;
 	}
@@ -947,6 +946,10 @@ main {
 
 	.projects-list-item {
 		width: calc(100% - 80px);
+	}
+
+	.projects-list-item-img {
+		height: 100%;
 	}
 }
 
@@ -962,7 +965,6 @@ main {
 	}
 
 	.projects-list-item-img {
-		width: 100%;
 		height: auto;
 		grid-row-end: 2;
 	}
@@ -990,8 +992,9 @@ main {
 	}
 }
 
-
-
+/**
+ * Cookies message
+**/
 
 .cookies-message {
 	position: fixed;
