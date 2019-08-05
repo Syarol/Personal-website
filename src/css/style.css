@@ -149,6 +149,12 @@ a {
 	height: 34px;
 	position: relative;
 	width: 60px;
+	-webkit-tap-highlight-color: transparent; /*prevents grey highlighting on click at mobile webkit browsers*/
+}
+
+.mode-switch:focus,
+.mode-switch:active {
+    background: transparent; /*prevents grey highlighting on click at mobile firefox browser*/
 }
 
 .mode-switch input {
@@ -295,7 +301,6 @@ main {
 	font-size: 3.5em;
 	color: #3C3C3C;
 	text-align: center;
-	/*font-family: var(--titles-font);*/
 }
 
 .highlight {
@@ -716,21 +721,21 @@ main {
 		display: flex;
 		flex-direction: column;
 		padding: 10px;
-	width: calc(100% - 20px);
-	height: calc(100% - 50px);
-	position: fixed;
-	top: 0;
-	background-color: var(--bg-color-alt);
-	z-index: 1000;
-	align-items: center;
-	overflow-y: auto;
-	overflow-x: hidden;
-	padding: 50px 10px 0 10px;
-	transition: transform .75s cubic-bezier(.45,.05,.55,.95);
+		width: calc(100% - 20px);
+		height: calc(100% - 50px);
+		position: fixed;
+		top: 0;
+		background-color: var(--bg-color-alt);
+		z-index: 1000;
+		align-items: center;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 50px 10px 0 10px;
+		transition: transform .75s cubic-bezier(.45,.05,.55,.95);
 	}
 
 	.sidebar-showed {
-	transform: translateX(0);
+		transform: translateX(0);
 	}
 
 	.sidebar-hidden {
@@ -738,32 +743,32 @@ main {
 	}
 
 	.sidebar-header{
-	height: 50px;
-	display: flex;
-	width: 95%;
-	align-items: center;
-	justify-content: space-between;
-	position: fixed;
-	top: 0;
-	left: 0;
-	padding: 0 2.5%;
-	background-color: var(--header-bg-color);
-	color: var(--font-color);
-	z-index: 10;
+		height: 50px;
+		display: flex;
+		width: 95%;
+		align-items: center;
+		justify-content: space-between;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 0 2.5%;
+		background-color: var(--header-bg-color);
+		color: var(--font-color);
+		z-index: 10;
 	}
 
 	.sidebar-title{
 		font-family: var(--logo-font);
-	font-size: 1.5em;
-	justify-self: center;
+		font-size: 1.5em;
+		justify-self: center;
 	}
 
 	.sidebar-header i{
-	font-size: 1.2em;
+		font-size: 1.2em;
 	}
 
 	.sidebar-close-btn{
-	cursor: pointer;
+		cursor: pointer;
 	}
 
 	.sidebar-container {
@@ -772,7 +777,7 @@ main {
 		margin: 50px auto 40px auto;
 		display: flex;
 		flex-direction: column;
-	text-align: start;
+		text-align: start;
 	}
 
 	.sidebar-container a{
