@@ -69,6 +69,10 @@ a {
 	text-decoration: none;
 }
 
+i {
+	-webkit-tap-highlight-color: transparent; /*prevents grey highlighting on click at mobile webkit browsers*/
+}
+
 .btn {
 	color: var(--btn-rev-color);
 	border: 4px solid var(--btn-rev-color);
