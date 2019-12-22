@@ -85,33 +85,33 @@
 }
 
 .penrose-line > div:nth-of-type(1) {
-  width: 0;
-  height: calc(var(--thickness) * var(--sin60));
+	width: 0;
+	height: calc(var(--thickness) * var(--sin60));
 
 	transform-origin: 0 100%;
 	transform: translateX(40px) rotate(-60deg) skewX(-30deg);
 
-  animation-name: penrose-short-line, rotate-short-penrose;
-  -webkit-animation-timing-function: ease, steps(1, start);
-  animation-timing-function: ease, steps(1, jump-start);
-  animation-iteration-count: infinite;
-  animation-duration: 6s, 6s;
-  animation-fill-mode: forwards;
+	animation-name: penrose-short-line, rotate-short-penrose;
+	-webkit-animation-timing-function: ease, steps(1, start);
+	animation-timing-function: ease, steps(1, jump-start);
+	animation-iteration-count: infinite;
+	animation-duration: 6s, 6s;
+	animation-fill-mode: forwards;
 }
 
 .penrose-line > div:nth-of-type(2) {
-  width: 0;
-  height: calc(var(--thickness) * var(--sin60));
+	width: 0;
+	height: calc(var(--thickness) * var(--sin60));
 
 	transform-origin: 0 100%;
 	transform: translateX(100%) rotate(180deg) skewX(-30deg) translateY(100%);
 
-  animation-name: penrose-long-line, rotate-long-penrose;
-  -webkit-animation-timing-function: ease, steps(1, start);
-  animation-timing-function: ease, steps(1, jump-start);
-  animation-iteration-count: infinite;
-  animation-duration: 6s, 6s;
-  animation-fill-mode: forwards;
+	animation-name: penrose-long-line, rotate-long-penrose;
+	-webkit-animation-timing-function: ease, steps(1, start);
+	animation-timing-function: ease, steps(1, jump-start);
+	animation-iteration-count: infinite;
+	animation-duration: 6s, 6s;
+	animation-fill-mode: forwards;
 
 	right: 0;
 }

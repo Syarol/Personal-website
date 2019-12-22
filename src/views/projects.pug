@@ -13,26 +13,28 @@ main.projects-main
 		each item in projects
 			div.projects-list-item
 				img.projects-list-item-img(src= item.thumbnailURL)
-				h3.project-title= item.title
-				ul.project-tags-list 
-					each tag in item.tags
-						li= tag
-				p.project-description= item.description
-				span.link.text-link
-					a(href= item.url) Take a look 
-					.link-underline
+				div.project-info
+					h3.project-title= item.title
+					ul.project-tags-list 
+						each tag in item.tags
+							li= tag
+					p.project-description= item.description
+					span.link.text-link
+						a(href= item.url) Take a look 
+						.link-underline
 		- var values = [1, 2, 3];
 			each val in values
 				div.projects-list-item
 					img.projects-list-item-img(src="img/project-template-2.jpg")
-					h3.project-title Title
-					ul.project-tags-list 
-						li Node.js
-						li Vue.js
-					p.project-description Some site description
-					span.link.text-link
-						a(href="/projects") Take a look
-						.link-underline
+					div.project-info
+						h3.project-title Title
+						ul.project-tags-list 
+							li Node.js
+							li Vue.js
+						p.project-description Some site description
+						span.link.text-link
+							a(href="/projects") Take a look
+							.link-underline
 
 include includes/footer.pug
 

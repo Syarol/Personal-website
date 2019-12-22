@@ -61,7 +61,6 @@ if (isCookiesAccepted) {
 	}
 }
 
-
 /**
  * Hiding/Showing of header panel, inpage navigation
 **/
