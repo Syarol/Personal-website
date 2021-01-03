@@ -5,7 +5,7 @@
 :root {
 	--length: 200px;
 	--thickness: 40px;
-	--sin60: 0.86602540378; /*sin60*/
+	--sin60: 0.86602540378;
 }
 
 .preloader-wrapper {

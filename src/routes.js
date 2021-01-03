@@ -12,8 +12,7 @@ const router = require('express').Router();
 **/
 
 const MongoClient = require('mongodb').MongoClient;
-
-var projects;
+let projects;
 
 // Use connect method to connect to the server
 MongoClient.connect(url, {useNewUrlParser: true}, function(err, database) {
@@ -50,6 +49,10 @@ router.get('/projects', function(req, res){
 
 router.get('/contact', function(req, res){
   res.sendFile(path.join(__dirname + '/html/contact.html'));
+});
+
+router.get('/html/templates/header.html', (req, res) => {
+	res.sendFile(path.join(__dirname + '/html/templates/header.html'));
 });
 
 /**

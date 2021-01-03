@@ -6,6 +6,7 @@
 	<title>Oleh Yaroshchuk</title>
 
 	<link rel="stylesheet" href="../css/preloader.css">
+	<script src="../js/preloader.js"></script>
   <!-- <link rel="preload" href="../js/preloader.js" as="script"> -->
 
 	<meta name="viewport" content ="width=device-width, shrink-to-fit=no"/>
@@ -25,54 +26,12 @@
 </head>
 
 <body ontouchstart="">
-	<div class="preloader-wrapper">
-    <div class="loader">
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-    </div>
-  </div><!-- .preloader-wrapper -->
+	<page-preloader></page-preloader>
 
-	<header class="site-header site-header-top">
-		<a href="/" class="logo">Oleh Yaroshchuk</a>
-		<nav class="site-nav">
-			<span class="link header-link">
-				<a href="/">Home</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/about">About</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/projects">Projects</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/contact">Contact</a>
-				<div class="link-underline"></div>
-			</span>
-		</nav>
-		<div class="mode-switch-wrapper header-mode-switch-wrapper" data-tooltip="Click to change mode">
-	    <label class="mode-switch" for="checkbox">
-		    <input type="checkbox" id="checkbox" class="mode-switch-input"/>
-	  	  <div class="slider round"></div>
-		  </label>
-		</div>
-		<div class="sidebar-open-btn" data-tooltip="Open sidebar">
-			<i class="fas fa-bars"></i>
-		</div>		
-	</header>
-
+	<custom-header>
+		<i slot="hmbrg-btn" class="fas fa-bars"></i>
+	</custom-header>
+	
 	<main class="about-main">
 		<section class="content-section">
 			<h1 class="section-header">About me</h1>
@@ -134,12 +93,9 @@
 		</section>
 	</main>
 	
-	<footer class="site-footer">
-		<div class="move-top-btn" data-tooltip="Go to top">
-			<i class="fas fa-arrow-up"></i>
-		</div>
-		<span class="footer-text">Build with <span class="heart-icon">❤️</span> and 💻. © Oleh Yaroshchuk 2019 - 2020</span>
-	</footer>
+	<custom-footer>
+		<i slot="arrow-up" class="fas fa-arrow-up"></i>
+	</custom-footer>
 
 	<div class="sidebar sidebar-hidden">
 		<header class="sidebar-header">
@@ -175,6 +131,9 @@
 		<span class="btn cookies-accept-btn">Close</span>
 	</div>
 
+	<script defer src="../js/switcher.js"></script>
+	<script defer src="../js/header.js"></script>
+	<script defer src="../js/footer.js"></script>
 	<script src="../js/index.js"></script>
 </body>
 

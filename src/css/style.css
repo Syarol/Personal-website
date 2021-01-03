@@ -809,6 +809,10 @@ main {
  * 
 **/
 
+.fa-arrow-up {
+	margin: auto;
+}
+
 .skills-container {
 	width: calc(100% - 40px);
 	background-color: var(--bg-color-alt);

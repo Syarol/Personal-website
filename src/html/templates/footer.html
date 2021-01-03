@@ -1,0 +1,53 @@
+<template>
+	<footer class="site-footer">
+		<div class="move-top-btn" data-tooltip="Go to top">
+			<slot name="arrow-up"></slot>
+		</div>
+		<span class="footer-text">Build with <span class="heart-icon">❤️</span> and 💻. © Oleh Yaroshchuk 2019 - 2021</span>
+	</footer>
+
+	<style>
+		a {
+			color: var(--text-link-color);
+			text-decoration: none;
+		}
+
+		/**
+		* Footer
+		**/
+
+		.site-footer {
+			flex-shrink: 0;
+			width: 100%;
+			height: 3em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			background-color: var(--bg-color-alt);
+			padding-bottom: 10px;
+			margin-top: 15px;
+		}
+
+		.move-top-btn {
+			width: 30px;
+			height: 30px;
+			display: flex;
+			font-size: 1.1em;
+			border: 2px solid;
+			cursor: pointer;
+			margin-top: -17px;
+			background-color: var(--move-top-btn-color);
+		}
+
+		.footer-text {
+			font-size: .8em;
+			font-family: var(--text-font);
+			margin: auto;
+		}
+
+		.heart-icon {
+			color: #E81224;
+		}
+	</style>
+</template>
