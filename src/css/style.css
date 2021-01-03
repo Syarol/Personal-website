@@ -261,7 +261,8 @@ main {
 	padding: 2em 5px;
 }
 
-.content-section p {
+.content-section p,
+.content-section .paragraph {
 	font-family: var(--text-font);
 	line-height: 150%;
 	margin-bottom: 0;
@@ -281,7 +282,8 @@ main {
 }
 
 @media screen and (min-width: 769px) {
-	.about-main .content-section p {
+	.about-main .content-section p,
+	.about-main .content-section .paragraph {
 		width: 37.5em;
 	}
 }
@@ -365,6 +367,35 @@ main {
 .divider {
 	width: 75px;
 	margin: 5px auto;
+}
+
+.sided {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.left {
+	text-align: left;
+}
+
+.paragraph {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: column;
+}
+
+.paragraph > span {
+	margin: .5em 0;
+}
+
+.paragraph .years {
+	color: #646481;
+}
+
+.paragraph ul {
+	margin: 0;
+	text-align: left;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px){

@@ -1,0 +1,47 @@
+a {
+	color: var(--text-link-color);
+	text-decoration: none;
+}
+
+.link {
+	position: relative;
+}
+
+.link a {
+	padding: 0 2px;
+	z-index: 2;
+	position: relative;
+	transition: 1s ease;
+}
+
+.link-underline {
+	height: 2px;
+	background-color: var(--link-underline-color);
+	position: absolute;
+	bottom: -2px;
+	z-index: 1;
+	transition: .5s ease-in-out;
+	display: inline-block;
+	left: 0;
+}
+
+.text-link {
+	white-space: nowrap;
+}
+
+.text-link > .link-underline {
+	width: 100%;
+}
+
+/*Works only on non-touch devices */
+@media (any-hover: hover) and (pointer: fine) {
+	.text-link a:hover,
+	.text-link a:focus {
+		color: var(--bg-color);
+	}
+
+	.text-link a:hover + .link-underline,
+	.text-link a:focus + .link-underline {
+		height: calc(100% + 2px);
+	}
+}

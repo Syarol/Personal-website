@@ -13,7 +13,7 @@
 
 			this._shadowRoot = this.attachShadow({mode: 'open'});
 			this._shadowRoot.appendChild(headerTemplate.cloneNode(true));
-			this.header = this._shadowRoot.firstElementChild;
+			this.header = this._shadowRoot.lastElementChild;
 			this.lastYPos = window.scrollY;
 
 			/*if page open not from top then "stick" header to top of page*/

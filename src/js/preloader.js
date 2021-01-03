@@ -16,8 +16,6 @@
 				
 			const shadowRoot = this.attachShadow({mode: 'open'});
 			shadowRoot.appendChild(template.cloneNode(true));
-
-			//window.onload = () => console.log('fdd');
 		}
 	}
 

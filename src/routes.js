@@ -35,24 +35,20 @@ router.get('/', function(req, res){
 });
 
 router.get('/about', function(req, res){
-  res.sendFile(path.join(__dirname + '/html/about.html'));
+	res.sendFile(path.join(__dirname + '/html/about.html'));
 });
 
 router.get('/projects', function(req, res){
 	//gets all elements of collection and render them 
 	projects.find({}).toArray(function(err, docs) {
 		res.render(path.join(__dirname + '/views/projects.pug'), {
-	  	projects: docs
+			projects: docs
 		});
-  });
+	});
 });
 
 router.get('/contact', function(req, res){
-  res.sendFile(path.join(__dirname + '/html/contact.html'));
-});
-
-router.get('/html/templates/header.html', (req, res) => {
-	res.sendFile(path.join(__dirname + '/html/templates/header.html'));
+	res.sendFile(path.join(__dirname + '/html/contact.html'));
 });
 
 /**
