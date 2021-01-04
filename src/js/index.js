@@ -12,24 +12,6 @@ const mode = localStorage.getItem('mode') ? localStorage.getItem('mode') : 'ligh
 document.documentElement.setAttribute('data-mode', mode);
 
 /**
- * Accepting using cookies
-**/
-
-const isCookiesAccepted = localStorage.getItem('cookies-allowed') ? localStorage.getItem('cookies-allowed') : null; //gets saved state from localStorage
-var cookiesMessage = document.getElementsByClassName('cookies-message')[0];
-
-/*if using of cookies is allowed then remove the message, else - adds a listener for cookies accepting*/
-if (isCookiesAccepted) {
-	cookiesMessage.remove();
-} else {
-	let acceptCookiesBtn = document.getElementsByClassName('cookies-accept-btn')[0];
-	acceptCookiesBtn.onclick = () => {
-		cookiesMessage.remove();
-		localStorage.setItem('cookies-allowed', true);
-	}
-}
-
-/**
  * Inpage navigation
 **/
 

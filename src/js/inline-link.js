@@ -20,6 +20,8 @@
 				
 			const shadowRoot = this.attachShadow({mode: 'open'});
 			shadowRoot.appendChild(elTemplate.cloneNode(true));
+
+			this.onclick = () => shadowRoot.activeElement.blur();
 		}
 	}
 

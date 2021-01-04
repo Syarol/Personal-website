@@ -23,8 +23,6 @@
 	--move-top-btn-color: #ff4bfe;
 	--sidebar-link-color: #5b5b5b;
 	--sidebar-link-color-alt: #292922;
-	--cookies-message-color: #e1e1ff;
-	--cookies-message-bg-color: #1e1e24b3;
 }
 
 :root[data-mode="dark"] {
@@ -1057,50 +1055,5 @@ main {
 
 	.projects-list-item {
 		max-width: 600px;
-	}
-}
-
-/**
- * Cookies message
-**/
-
-.cookies-message {
-	position: fixed;
-	bottom: 0;
-	width: calc(100% - 30px);
-	line-height: 150%;
-	background-color: var(--cookies-message-bg-color);
-	padding: 10px 15px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 99;
-	color: var(--cookies-message-color);
-}
-
-.cookies-message p {
-	font-family: var(--text-font);
-	font-size: .75em;
-	margin-right: 10px;
-}
-
-.cookies-accept-btn {
-	height: max-content;
-	color: var(--cookies-message-color);
-	border-color: var(--cookies-message-color);
-}
-
-.cookies-accept-btn:hover {
-	color: var(--cookies-message-bg-color);
-	background-color: var(--cookies-message-color);
-}
-
-@media screen and (max-width: 480px) {
-	.cookies-message {
-		flex-direction: column;
-	}
-
-	.cookies-accept-btn {
-		width: 100px;
 	}
 }
