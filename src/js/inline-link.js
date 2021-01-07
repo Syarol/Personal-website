@@ -9,7 +9,7 @@
 		.then(res => res.text())
 		.catch(err => console.log(err));
 
-	class Preloader extends HTMLElement {
+	class InlineLink extends HTMLElement {
 		constructor() {
 			super();
 			if (!this.textContent) return console.error('"Inline-link" doesn\'t received all needed data!');
@@ -25,5 +25,5 @@
 		}
 	}
 
-	customElements.define('inline-link', Preloader);
+	customElements.define('inline-link', InlineLink);
 })();

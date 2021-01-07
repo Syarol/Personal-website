@@ -507,6 +507,7 @@ main {
 }
 
 .card-title {
+	line-height: 1.2em;
 	max-width: 80%;
 	align-self: center;
 	margin: 0;
@@ -517,6 +518,7 @@ main {
 .card-subtitle {
 	font-size: .8em;
 	color: #ec1bf2;
+	margin-top: 5px;
 }
 
 .project-card .btn {
@@ -839,7 +841,8 @@ main {
 		color: var(--sidebar-link-color-alt);
 	}
 
-	.sidebar-container .mode-switch-wrapper {
+	.sidebar-container .mode-switch-wrapper,
+	.sidebar-container > mode-switch {
 		margin-top: auto;
 	}
 }

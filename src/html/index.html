@@ -53,46 +53,10 @@
 			<h2 class="section-header">My works</h2>
 			<hr class="divider">
 			<div class="projects-container">
-				<div class="project">
-					<img class="project-img" src="img/project-template-1.jpg">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">Title</h3>
-							<span class="card-subtitle">Used technologies</span>
-						</div>
-						<a class="btn" href="#">Take a look</a>
-					</div>
-				</div>
-				<div class="project">
-					<img class="project-img" src="img/project-template-2.jpg">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">Title</h3>
-							<span class="card-subtitle">Used technologies</span>
-						</div>
-						<a class="btn" href="#">Take a look</a>
-					</div>
-				</div>
-				<div class="project">
-					<img class="project-img" src="./img/preview-whereisamoviebot.png">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">"Where is a movie" bot</h3>
-							<span class="card-subtitle">C#, Redis, Telegram Bot API, IBM Language Translator API</span>
-						</div>
-						<a class="btn" href="https://t.me/whereisamoviebot">Take a look</a>
-					</div>
-				</div>
-				<div class="project">
-					<img class="project-img" src="./img/preview-oasis-bookstore-narrow.png">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">Oasis Bookstore</h3>
-							<span class="card-subtitle">Node.js, MySQL, Redis</span>
-						</div>
-						<a class="btn" href="https://mysterious-thicket-22919.herokuapp.com/">Take a look</a>
-					</div>
-				</div>
+				<project-card image="img/project-template-1.jpg" title="Title" stack="Used technologies" link="#" ></project-card>
+				<project-card image="img/project-template-2.jpg" title="Title" stack="Used technologies" link="#" ></project-card>
+				<project-card image="img/preview-whereisamoviebot.png" title="&quot;Where is a movie&quot; bot" stack="C#, Redis" link="https://t.me/whereisamoviebot" ></project-card>
+				<project-card image="img/preview-oasis-bookstore-narrow.png" title="Oasis Bookstore" stack="Node.js, MySQL, Redis" link="https://mysterious-thicket-22919.herokuapp.com" ></project-card>
 			</div>
 			<a class="btn" href="/projects">See all</a>
 		</section>
@@ -130,6 +94,7 @@
 	<script defer src="../js/header.js"></script>
 	<script defer src="../js/sidebar.js"></script>
 	<script defer src="../js/inline-link.js"></script>
+	<script defer src="../js/project-card.js"></script>
 	<script defer src="../js/footer.js"></script>
 	<script src="../js/index.js"></script>
 </body>
