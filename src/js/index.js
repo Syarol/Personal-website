@@ -3,9 +3,12 @@
 **/
 
 const header = document.getElementsByTagName('custom-header')[0];
+const switchEvent = new CustomEvent('switcher');
+const sidebarOpenEvent = new CustomEvent('sidebar-open');
+const sidebarCloseEvent = new CustomEvent('sidebar-close');
 
 /**
- * Applying saved theme
+ * Applying saved in localStorage theme
 **/
 
 const mode = localStorage.getItem('mode') ? localStorage.getItem('mode') : 'light'; //gets saved mode from localStorage
@@ -31,7 +34,7 @@ inpageLink.map(el => el.onclick = e => {
 	scrollTo(offset);
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
 	/*removes preloader when page is loaded*/
 	document.getElementsByTagName('page-preloader')[0].remove();
 });
@@ -40,21 +43,17 @@ window.addEventListener('load', () => {
  * Hiding/Showing of sidebar
 **/
 
-const sidebar = document.getElementsByClassName('sidebar')[0];
+const sidebar = document.getElementsByTagName('custom-sidebar')[0];
 
-/* document.getElementsByClassName('sidebar-open-btn')[0].onclick = () => {
-	sidebar.classList.add('sidebar-showed');
-	sidebar.classList.remove('sidebar-hidden');
-	
+window.addEventListener('sidebar-open', () => {
+	sidebar.open();
 	document.body.classList.add('scroll-disabled');
-}; */
+});
 
-document.getElementsByClassName('sidebar-close-btn')[0].onclick = () => {
-	sidebar.classList.add('sidebar-hidden');
-	sidebar.classList.remove('sidebar-showed');
-
+window.addEventListener('sidebar-close', () => {
+	sidebar.close();
 	document.body.classList.remove('scroll-disabled');
-};
+});
 
 if (document.getElementsByClassName('home-main')[0] || document.getElementsByClassName('contact-main')[0]) {
 	/*Saves email address to clipboard*/

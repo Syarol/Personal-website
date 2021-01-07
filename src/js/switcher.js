@@ -20,11 +20,8 @@
 
 			switcher.onchange = e => switchTheme(e);
 
-			switcher.addEventListener('switcher', (e) => { 
-				if (this.theme != e.detail) {
-					this.theme = e.detail;
-				}
-
+			window.addEventListener('switcher', (e) => { 
+				this.theme = localStorage.getItem('mode');
 				switcher.checked = this.theme === 'dark' ? true : false;
 			});
 		}
@@ -45,7 +42,7 @@
 			localStorage.setItem('mode', 'light');
 		}
 		
-		e.target.dispatchEvent(new CustomEvent('switcher', { detail: localStorage.getItem('mode') }));
+		window.dispatchEvent(switchEvent);
 	}
 })();
 

@@ -1,0 +1,30 @@
+<template>
+	<style>
+		@import "./../../css/sidebar.css";
+	</style>
+
+	<div class="sidebar sidebar-hidden">
+		<header class="sidebar-header">
+			<span class="sidebar-title">Oleh Yaroshchuk</span>
+			<span class="sidebar-close-btn" data-tooltip="Close">
+				<slot name="close-btn"></slot>
+				<!-- <i class="fas fa-times"></i> -->
+			</span>
+		</header>
+		<div class="sidebar-container">
+			<span>
+				<a href="/">Home</a>
+			</span>
+			<span>
+				<a href="/about">About</a>
+			</span>
+			<span>
+				<a href="/projects">Projects</a>
+			</span>
+			<span>
+				<a href="/contact">Contact</a>
+			</span>
+			<mode-switch></mode-switch>
+		</div>
+	</div>
+</template>

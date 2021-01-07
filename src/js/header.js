@@ -19,6 +19,8 @@
 			/*if page open not from top then "stick" header to top of page*/
 			if (window.pageYOffset > 0) this.stateHandler(true, false);
 
+			//'sidebarEvent' have to be declared in script that serve page
+			this._shadowRoot.lastElementChild.getElementsByClassName('sidebar-open-btn')[0].onclick = () => window.dispatchEvent(sidebarOpenEvent);
 			window.onscroll = e => this.positionController(e);
 		}
 

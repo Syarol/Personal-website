@@ -270,12 +270,22 @@ main {
 	.projects-main .content-section {
 		padding: 1em 10px;
 	}
+
+	.about-main .content-section p,
+	.about-main .content-section .paragraph {
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 	.about-main .content-section,
 	.content-section {
 		padding: 2em 25px;
+	}
+
+	.about-main .content-section p,
+	.about-main .content-section .paragraph {
+		width: 100%;
 	}
 }
 

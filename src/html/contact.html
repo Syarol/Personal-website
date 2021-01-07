@@ -30,6 +30,9 @@
 	<custom-header>
 		<i slot="hmbrg-btn" class="fas fa-bars"></i>
 	</custom-header>
+	<custom-sidebar>
+		<i slot="close-btn" class="fas fa-times"></i>
+	</custom-sidebar>
 
 	<main class="contact-main">
 		<section class="content-section contact-section">
@@ -61,37 +64,9 @@
 		<i slot="arrow-up" class="fas fa-arrow-up"></i>
 	</custom-footer>
 
-	<div class="sidebar sidebar-hidden">
-		<header class="sidebar-header">
-			<span class="sidebar-title">Oleh Yaroshchuk</span>
-			<span class="sidebar-close-btn" data-tooltip="Close">
-				<i class="fas fa-times"></i>
-			</span>
-		</header>
-		<div class="sidebar-container">
-			<span>
-				<a href="/">Home</a>
-			</span>
-			<span>
-				<a href="/about">About</a>
-			</span>
-			<span>
-				<a href="/projects">Projects</a>
-			</span>
-			<span>
-				<a href="/contact">Contact</a>
-			</span>
-			<div class="mode-switch-wrapper" data-tooltip="Click to change mode">
-				<label class="mode-switch" for="checkbox">
-					<input type="checkbox" id="checkbox" class="mode-switch-input"/>
-					<div class="slider round"></div>
-				</label>
-			</div>
-		</div>
-	</div>
-
 	<script defer src="../js/switcher.js"></script>
 	<script defer src="../js/header.js"></script>
+	<script defer src="../js/sidebar.js"></script>
 	<script defer src="../js/inline-link.js"></script>
 	<script defer src="../js/footer.js"></script>
 	<script src="../js/index.js"></script>
