@@ -1,0 +1,31 @@
+<template>
+	<style>
+		@import "./../../css/header.css";
+	</style>
+
+	<header class="site-header site-header-top">
+		<a href="/" class="logo">Oleh Yaroshchuk</a>
+		<nav class="site-nav">
+			<span class="link header-link">
+				<a href="/">Home</a>
+				<div class="link-underline"></div>
+			</span>
+			<span class="link header-link">
+				<a href="/about">About</a>
+				<div class="link-underline"></div>
+			</span>
+			<span class="link header-link">
+				<a href="/projects">Projects</a>
+				<div class="link-underline"></div>
+			</span>
+			<span class="link header-link">
+				<a href="/contact">Contact</a>
+				<div class="link-underline"></div>
+			</span>
+		</nav>
+		<mode-switch class="header-mode-switch"></mode-switch>
+		<div class="sidebar-open-btn" data-tooltip="Open sidebar">
+			<slot name="hmbrg-btn"></slot>
+		</div>		
+	</header>
+</template>

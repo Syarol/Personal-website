@@ -71,10 +71,10 @@ gulp.task('nodemon', function(cb) {
 
 exports.default = gulp.series(
 	minifyCSS,
-  minifyHTML,
-  minifyJS,
+	minifyHTML,
+	minifyJS,
 	gulp.parallel(
-    nodemon,
+		nodemon,
 		watchAll
 	)
 )

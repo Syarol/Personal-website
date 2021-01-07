@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<title>Oleh Yaroshchuk</title>
 
-	<link rel="preload" href="../css/preloader.css" as="style">
-  <!-- <link rel="preload" href="../js/preloader.js" as="script"> -->
+	<link rel="stylesheet" href="../css/preloader.css">
+	<script src="../js/preloader.js"></script>
 
 	<meta name="viewport" content ="width=device-width, shrink-to-fit=no"/>
 	<meta name="title" content="Oleh Yaroshchuk">
@@ -25,54 +25,14 @@
 </head>
 
 <body ontouchstart="">
-	<div class="preloader-wrapper">
-    <div class="loader">
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-    </div>
-  </div><!-- .preloader-wrapper -->
+	<page-preloader></page-preloader>
 
-
-	<header class="site-header site-header-top">
-		<a href="/" class="logo">Oleh Yaroshchuk</a>
-		<nav class="site-nav">
-			<span class="link header-link">
-				<a href="/">Home</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/about">About</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/projects">Projects</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/contact">Contact</a>
-				<div class="link-underline"></div>
-			</span>
-		</nav>
-		<div class="mode-switch-wrapper header-mode-switch-wrapper" data-tooltip="Click to change mode">
-	    <label class="mode-switch" for="checkbox">
-		    <input type="checkbox" id="checkbox" class="mode-switch-input"/>
-	  	  <div class="slider round"></div>
-		  </label>
-		</div>
-		<div class="sidebar-open-btn" data-tooltip="Open sidebar">
-			<i class="fas fa-bars"></i>
-		</div>		
-	</header>
+	<custom-header>
+		<i slot="hmbrg-btn" class="fas fa-bars"></i>
+	</custom-header>
+	<custom-sidebar>
+		<i slot="close-btn" class="fas fa-times"></i>
+	</custom-sidebar>
 
 	<main class="contact-main">
 		<section class="content-section contact-section">
@@ -80,88 +40,35 @@
 			<hr class="divider">
 			<p>Interested in working together, or have any questions or offers? Great! Get in touch, I'm friendly.</p>
 			<div>
-				<span class="link text-link">
-					<a href="mailto:oleh.yaroshchuk@yahoo.com">oleh.yaroshchuk@yahoo.com</a>
-					<div class="link-underline"></div>
-				</span>				
+				<inline-link to="mailto:oleh.yaroshchuk@yahoo.com">oleh.yaroshchuk@yahoo.com</inline-link>
 				<i class="far fa-copy copy-email-btn" data-tooltip="Click to copy email"></i>
 			</div>
 			<p>Or you may try one of this ways:</p>
 			<div class="links-container">
-				<span class="link text-link">
-					<a href="https://www.facebook.com/oleh.yaroshchuk">Facebook</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://www.facebook.com/oleh.yaroshchuk">Facebook</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://twitter.com/Oleh_Yaroshchuk">Twitter</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://twitter.com/oleh_yaroshchuk">Twitter</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://t.me/oleh_yaroshchuk">Telegram</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://t.me/oleh_yaroshchuk">Telegram</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://github.com/Syarol">Github</a>
-				 <div class="link-underline"></div>
-				</span>
+				<inline-link to="https://github.com/Syarol">Github</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://www.instagram.com/oleh_yaroshchuk">Instagram</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://www.instagram.com/oleh_yaroshchuk">Instagram</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://www.linkedin.com/in/oleh-yaroshchuk">LinkedIn</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://www.linkedin.com/in/oleh-yaroshchuk">LinkedIn</inline-link>
 			</div>
 		</section>
 	</main>
 	
-	<footer class="site-footer">
-		<div class="move-top-btn" data-tooltip="Go to top">
-			<i class="fas fa-arrow-up"></i>
-		</div>
-		<span class="footer-text">Build with <span class="heart-icon">❤️</span> and 💻. © Oleh Yaroshchuk 2019 - 2020</span>
-	</footer>
+	<custom-footer>
+		<i slot="arrow-up" class="fas fa-arrow-up"></i>
+	</custom-footer>
 
-	<div class="sidebar sidebar-hidden">
-		<header class="sidebar-header">
-			<span class="sidebar-title">Oleh Yaroshchuk</span>
-			<span class="sidebar-close-btn" data-tooltip="Close">
-				<i class="fas fa-times"></i>
-			</span>
-		</header>
-		<div class="sidebar-container">
-			<span>
-				<a href="/">Home</a>
-			</span>
-			<span>
-				<a href="/about">About</a>
-			</span>
-			<span>
-				<a href="/projects">Projects</a>
-			</span>
-			<span>
-				<a href="/contact">Contact</a>
-			</span>
-			<div class="mode-switch-wrapper" data-tooltip="Click to change mode">
-		    <label class="mode-switch" for="checkbox">
-			    <input type="checkbox" id="checkbox" class="mode-switch-input"/>
-		  	  <div class="slider round"></div>
-			  </label>
-			</div>
-		</div>
-	</div>
-
-	<div class="cookies-message">
-		<p>This site used cookies and similar technologies to improve the browsing experience. Please, click the "Close" button and accept Cookie policy. They are not written, but you can trust me) </p>
-		<span class="btn cookies-accept-btn">Close</span>
-	</div>
-
+	<script defer src="../js/switcher.js"></script>
+	<script defer src="../js/header.js"></script>
+	<script defer src="../js/sidebar.js"></script>
+	<script defer src="../js/inline-link.js"></script>
+	<script defer src="../js/footer.js"></script>
 	<script src="../js/index.js"></script>
 </body>
 

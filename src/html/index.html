@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<title>Oleh Yaroshchuk</title>
 
-	<link rel="stylesheet" href="css/preloader.css">
-  <!-- <link rel="preload" href="js/preloader.js" as="script"> -->
+	<link rel="stylesheet" href="../css/preloader.css">
+	<script src="../js/preloader.js"></script>
 
 	<meta name="viewport" content ="width=device-width, shrink-to-fit=no"/>
 	<meta name="title" content="Oleh Yaroshchuk">
@@ -25,54 +25,14 @@
 </head>
 
 <body ontouchstart="">
-	<div class="preloader-wrapper">
-    <div class="loader">
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-		</div>
-	</div><!-- .preloader-wrapper -->
+	<page-preloader></page-preloader>
 
-
-	<header class="site-header site-header-top">
-		<a href="/" class="logo">Oleh Yaroshchuk</a>
-		<nav class="site-nav">
-			<span class="link header-link">
-				<a href="/">Home</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/about">About</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/projects">Projects</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/contact">Contact</a>
-				<div class="link-underline"></div>
-			</span>
-		</nav>
-		<div class="mode-switch-wrapper header-mode-switch-wrapper" data-tooltip="Click to change mode">
-			<label class="mode-switch" for="checkbox">
-			    <input type="checkbox" id="checkbox" class="mode-switch-input"/>
-			    <div class="slider round"></div>
-			</label>
-		</div>
-		<div class="sidebar-open-btn" data-tooltip="Open sidebar">
-			<i class="fas fa-bars"></i>
-		</div>		
-	</header>
+	<custom-header>
+		<i slot="hmbrg-btn" class="fas fa-bars"></i>
+	</custom-header>
+	<custom-sidebar>
+		<i slot="close-btn" class="fas fa-times"></i>
+	</custom-sidebar>
 
 	<main class="home-main">
 		<section class="banner-section">
@@ -84,8 +44,8 @@
 		<section class="content-section about-section">
 			<h2 class="section-header">About me</h2>
 			<hr class="divider">
-			<p>My name is on top left corner. I'm a <span class="highlight">Web developer</span> living in <span class="link text-link"><a href="https://en.wikipedia.org/wiki/Lutsk">Lutsk, Ukraine</a><span class="link-underline"></span></span>🇺🇦. Currenly, I'm a undergraduate of Software Engineering program from Lutsk National Technical University.</p>
-			<p>I love building different UI effects, animations and just write a code.</p>
+			<p>My name is at the top left corner. I'm a <span class="highlight">Web developer</span> living in <inline-link to="https://en.wikipedia.org/wiki/Lutsk">Lutsk, Ukraine 🇺🇦</inline-link>. Currently, I'm a Master's student in the Software Engineering program at Lutsk National Technical University.</p>
+			<p>I love building different UI effects, animations, and just write code.</p>
 			<a class="btn" href="/about">Read more</a>
 		</section>
 
@@ -93,46 +53,10 @@
 			<h2 class="section-header">My works</h2>
 			<hr class="divider">
 			<div class="projects-container">
-				<div class="project">
-					<img class="project-img" src="img/project-template-1.jpg">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">Title</h3>
-							<span class="card-subtitle">Used technologies</span>
-						</div>
-						<a class="btn" href="#">Take a look</a>
-					</div>
-				</div>
-				<div class="project">
-					<img class="project-img" src="img/project-template-2.jpg">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">Title</h3>
-							<span class="card-subtitle">Used technologies</span>
-						</div>
-						<a class="btn" href="#">Take a look</a>
-					</div>
-				</div>
-				<div class="project">
-					<img class="project-img" src="./img/preview-whereisamoviebot.png">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">"Where is a movie" bot</h3>
-							<span class="card-subtitle">C#, Redis, Telegram Bot API, IBM Language Translator API</span>
-						</div>
-						<a class="btn" href="https://t.me/whereisamoviebot">Take a look</a>
-					</div>
-				</div>
-				<div class="project">
-					<img class="project-img" src="./img/preview-oasis-bookstore-narrow.png">
-					<div class="project-card">
-						<div class="card-info">
-							<h3 class="card-title">Oasis Bookstore</h3>
-							<span class="card-subtitle">Node.js, MySQL, Redis</span>
-						</div>
-						<a class="btn" href="https://mysterious-thicket-22919.herokuapp.com/">Take a look</a>
-					</div>
-				</div>
+				<project-card image="img/project-template-1.jpg" title="Title" stack="Used technologies" link="#" ></project-card>
+				<project-card image="img/project-template-2.jpg" title="Title" stack="Used technologies" link="#" ></project-card>
+				<project-card image="img/preview-whereisamoviebot.png" title="&quot;Where is a movie&quot; bot" stack="C#, Redis" link="https://t.me/whereisamoviebot" ></project-card>
+				<project-card image="img/preview-oasis-bookstore-narrow.png" title="Oasis Bookstore" stack="Node.js, MySQL, Redis" link="https://mysterious-thicket-22919.herokuapp.com" ></project-card>
 			</div>
 			<a class="btn" href="/projects">See all</a>
 		</section>
@@ -142,89 +66,37 @@
 			<hr class="divider">
 			<p>Interested in working together, or have any questions or offers? Great! Get in touch, I'm friendly.</p>
 			<div>
-				<span class="link text-link">
-					<a href="mailto:oleh.yaroshchuk@yahoo.com">oleh.yaroshchuk@yahoo.com</a>
-					<div class="link-underline"></div>
-				</span>				
+				<inline-link to="mailto:oleh.yaroshchuk@yahoo.com">oleh.yaroshchuk@yahoo.com</inline-link>
 				<i class="far fa-copy copy-email-btn" data-tooltip="Click to copy email"></i>
 			</div>
 			<p>Or you may try one of this ways:</p>
 			<div class="links-container">
-				<span class="link text-link">
-					<a href="https://www.facebook.com/oleh.yaroshchuk">Facebook</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://www.facebook.com/oleh.yaroshchuk">Facebook</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://twitter.com/Oleh_Yaroshchuk">Twitter</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://twitter.com/oleh_yaroshchuk">Twitter</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://t.me/oleh_yaroshchuk">Telegram</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://t.me/oleh_yaroshchuk">Telegram</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://github.com/Syarol">Github</a>
-				 <div class="link-underline"></div>
-				</span>
+				<inline-link to="https://github.com/Syarol">Github</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://www.instagram.com/oleh_yaroshchuk">Instagram</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://www.instagram.com/oleh_yaroshchuk">Instagram</inline-link>
 				<div class="vr"></div>
-				<span class="link text-link">
-					<a href="https://www.linkedin.com/in/oleh-yaroshchuk">LinkedIn</a>
-					<div class="link-underline"></div>
-				</span>
+				<inline-link to="https://www.linkedin.com/in/oleh-yaroshchuk">LinkedIn</inline-link>
 			</div>
 		</section>
 	</main>
 	
-	<footer class="site-footer">
-		<div class="move-top-btn" data-tooltip="Go to top">
-			<i class="fas fa-arrow-up"></i>
-		</div>
-		<span class="footer-text">Build with <span class="heart-icon">❤️</span> and 💻. © Oleh Yaroshchuk 2019 - 2020</span>
-	</footer>
+	<custom-footer>
+		<i slot="arrow-up" class="fas fa-arrow-up"></i>
+	</custom-footer>
 
-	<div class="sidebar sidebar-hidden">
-		<header class="sidebar-header">
-			<span class="sidebar-title">Oleh Yaroshchuk</span>
-			<span class="sidebar-close-btn" data-tooltip="Close">
-				<i class="fas fa-times"></i>
-			</span>
-		</header>
-		<div class="sidebar-container">
-			<span>
-				<a href="/">Home</a>
-			</span>
-			<span>
-				<a href="/about">About</a>
-			</span>
-			<span>
-				<a href="/projects">Projects</a>
-			</span>
-			<span>
-				<a href="/contact">Contact</a>
-			</span>
-			<div class="mode-switch-wrapper" data-tooltip="Click to change mode">
-		    	<label class="mode-switch" for="checkbox">
-			    	<input type="checkbox" id="checkbox" class="mode-switch-input"/>
-		  	  		<div class="slider round"></div>
-		  	  	</label>
-			</div>
-		</div>
-	</div>
-
-	<div class="cookies-message">
-		<p>This site used cookies and similar technologies to improve the browsing experience. Please, click the "Close" button and accept Cookie policy. They are not written, but you can trust me) </p>
-		<span class="btn cookies-accept-btn">Close</span>
-	</div>
-
-	<script src="js/index.js"></script>
+	<script defer src="../js/switcher.js"></script>
+	<script defer src="../js/header.js"></script>
+	<script defer src="../js/sidebar.js"></script>
+	<script defer src="../js/inline-link.js"></script>
+	<script defer src="../js/project-card.js"></script>
+	<script defer src="../js/footer.js"></script>
+	<script src="../js/index.js"></script>
 </body>
 
 </html>

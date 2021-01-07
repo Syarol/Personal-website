@@ -1,0 +1,80 @@
+<template>
+	<div class="mode-switch-wrapper" data-tooltip="Click to change mode">
+		<label class="mode-switch" for="checkbox">
+			<input type="checkbox" id="checkbox" class="mode-switch-input"/>
+			<div class="slider round"></div>
+		</label>
+	</div>
+
+	<style>
+		.mode-switch-wrapper {
+			display: flex;
+			align-items: center;
+			width: max-content;
+		}
+
+		.mode-switch {
+			display: inline-block;
+			height: 34px;
+			position: relative;
+			width: 60px;
+			-webkit-tap-highlight-color: transparent; /*prevents grey highlighting on click at mobile webkit browsers*/
+		}
+
+		.mode-switch:focus,
+		.mode-switch:active {
+			background: transparent; /*prevents grey highlighting on click at mobile firefox browser*/
+		}
+
+		.mode-switch input {
+			display:none;
+		}
+
+		.slider {
+			position: absolute;
+			background-color: #ccc;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		.slider:before {
+			background-color: #fff;
+			bottom: 4px;
+			color: var(--mode-symbol-color);
+			font-family: "Font Awesome 5 Pro"; /*with other fonts don't work at android*/
+			font-weight: 900;
+			content: var(--mode-symbol);
+			height: 26px;
+			left: 4px;
+			position: absolute;
+			transition: .4s;
+			width: 26px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		input:checked + .slider {
+			background-color: #66bb6a;
+		}
+
+		input:checked + .slider:before {
+			transform: translateX(26px);
+		}
+
+		.slider.round {
+			border-radius: 34px;
+		}
+
+		.slider.round:before {
+			border-radius: 50%;
+		}
+
+		.sidebar-open-btn {
+			display: none;
+		}
+	</style>
+</template>

@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<title>Oleh Yaroshchuk</title>
 
 	<link rel="stylesheet" href="../css/preloader.css">
-  <!-- <link rel="preload" href="../js/preloader.js" as="script"> -->
+	<script src="../js/preloader.js"></script>
 
 	<meta name="viewport" content ="width=device-width, shrink-to-fit=no"/>
 	<meta name="title" content="Oleh Yaroshchuk">
@@ -25,71 +25,59 @@
 </head>
 
 <body ontouchstart="">
-	<div class="preloader-wrapper">
-    <div class="loader">
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-      <div class="penrose-line">
-      	<div></div>
-      	<div></div>
-      </div>
-    </div>
-  </div><!-- .preloader-wrapper -->
+	<page-preloader></page-preloader>
 
-	<header class="site-header site-header-top">
-		<a href="/" class="logo">Oleh Yaroshchuk</a>
-		<nav class="site-nav">
-			<span class="link header-link">
-				<a href="/">Home</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/about">About</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/projects">Projects</a>
-				<div class="link-underline"></div>
-			</span>
-			<span class="link header-link">
-				<a href="/contact">Contact</a>
-				<div class="link-underline"></div>
-			</span>
-		</nav>
-		<div class="mode-switch-wrapper header-mode-switch-wrapper" data-tooltip="Click to change mode">
-	    <label class="mode-switch" for="checkbox">
-		    <input type="checkbox" id="checkbox" class="mode-switch-input"/>
-	  	  <div class="slider round"></div>
-		  </label>
-		</div>
-		<div class="sidebar-open-btn" data-tooltip="Open sidebar">
-			<i class="fas fa-bars"></i>
-		</div>		
-	</header>
-
+	<custom-header>
+		<i slot="hmbrg-btn" class="fas fa-bars"></i>
+	</custom-header>
+	<custom-sidebar>
+		<i slot="close-btn" class="fas fa-times"></i>
+	</custom-sidebar>
+	
 	<main class="about-main">
 		<section class="content-section">
-			<h1 class="section-header">About me</h1>
+			<h2 class="section-header">About me</h2>
 			<hr class="divider">
-			<p>My name is Oleh Yaroshchuk and I'm a <span class="highlight">Web developer</span> from <span class="link text-link"><a href="https://en.wikipedia.org/wiki/Lutsk">Lutsk, Ukraine</a><span class="link-underline"></span></span>🇺🇦. Currently, I'm an undergraduate in Software Engineering program from Lutsk National Technical University.</p>
-			<p>I love building different UI effects, animations and just write code.</p>
+			<p>My name is at the top left corner. I'm a <span class="highlight">Web developer</span> living in <inline-link to="https://en.wikipedia.org/wiki/Lutsk">Lutsk, Ukraine 🇺🇦</inline-link>. Currently, I'm a Master's student in the Software Engineering program at Lutsk National Technical University.</p>
+			<p>I love building different UI effects, animations, and just write code.</p>
 		</section>
 		<section class="content-section">
-			<h2 class="section-header">Experience</h2>
+			<h2 class="section-header">Work Experience</h2>
 			<hr class="divider">
-			<p>Here is had to be a list of places where I worked before, but I have no worked before for real. At least, for now. Anyway, you can take a look at my <span class="link text-link"><a href="/projects">pet-projects</a><span class="link-underline"></span></span>, maybe some of them may interest you.</p>
+			<div class="paragraph">
+				<div class="sided">
+					<span>
+						<span class="highlight">Front-end Developer</span> at <inline-link to="https://smartecologic.com">SmartEcoLogic</inline-link>
+					</span>
+					<span class="years">Jan 2020 - Mar 2020</span>
+				</div>
+				<span>During employment here, I worked on the internal web-based app for managing calibrations of water meters. Thanks to me were:</span>
+				<ul>
+					<li>Implemented responsive design practices in developing the application;</li>
+					<li>Proposed and implemented application module that significantly improved UX;</li>
+					<li>Created custom Vue.js components;</li>
+					<li>Improved code readability.</li>
+				</ul>
+			</div>
+			<p>I know, it is not a long enough list. At least, for now. Anyway, you can take a look at my <inline-link to="/projects">pet-projects</inline-link>, maybe some of them may interest you.</p>
 		</section>
 		<section class="content-section">
 			<h2 class="section-header">Education</h2>
 			<hr class="divider">
-			<p class="highlight">B.E. Software Engineering</p>
-			<p><b>Lutsk National Technical University</b>, September 2016 - current</p>
+			<div class="paragraph">
+				<div class="sided">
+					<span class="highlight"><b>Lutsk National Technical University</b></span>
+					<span class="years">Sep 2020 - Present</span>
+				</div>
+				<span class="left">Master of Engineering in Software Engineering</span>
+			</div>
+			<div class="paragraph">
+				<div class="sided">
+					<span class="highlight"><b>Lutsk National Technical University</b></span>
+					<span class="years">Sep 2016 - Jul 2020</span>
+				</div>
+				<span class="left">Bachelor of Engineering with honors in Software Engineering</span>
+			</div>
 		</section>
 		<section class="content-section">
 			<h2 class="section-header">Skills</h2>
@@ -109,7 +97,8 @@
 				<div class="skills-list-wrapper">
 					<h3 class="skills-title">Tools</h3>
 					<ul class="skills-list">
-						<li>NPM</li>
+						<li>Git</li>
+						<li>npm</li>
 						<li>Gulp</li>
 						<li>Heroku</li>
 					</ul>
@@ -118,6 +107,10 @@
 					<h3 class="skills-title">Frameworks & Libs</h3>
 					<ul class="skills-list">
 						<li>Node.js</li>
+						<li>Vue.js</li>
+						<li>Vue-Router</li>
+						<li>Vuex</li>
+						<li>Nativescript</li>
 					</ul>
 				</div>
 				<div class="skills-list-wrapper">
@@ -125,56 +118,25 @@
 					<ul class="skills-list">
 						<li>MySQL</li>
 						<li>MongoDB</li>
+						<li>Redis</li>
 					</ul>
 				</div>
 
 			</div>
-			<p>Also, I'm currently diving into Vue.js and Python.</p>
-			<p>If you wanna see all of that information at a more formalized view, so you can find my <span class="highlight">CV</span> at this <span class="link text-link"><a href="../assets/Oleh Yaroshchuk.pdf">link</a><span class="link-underline"></span></span>.</p>
+			<p>Also, I'm currently diving into Python.</p>
+			<p>If you wanna see all of that information at a more formalized view, so you can find my <span class="highlight">CV</span> at this <inline-link to="https://drive.google.com/file/d/1ZTqWsAD8GMxX9xaHUqvX14qAORV-dJKl/view?usp=sharing">link</inline-link>.</p>
 		</section>
 	</main>
 	
-	<footer class="site-footer">
-		<div class="move-top-btn" data-tooltip="Go to top">
-			<i class="fas fa-arrow-up"></i>
-		</div>
-		<span class="footer-text">Build with <span class="heart-icon">❤️</span> and 💻. © Oleh Yaroshchuk 2019 - 2020</span>
-	</footer>
+	<custom-footer>
+		<i slot="arrow-up" class="fas fa-arrow-up"></i>
+	</custom-footer>
 
-	<div class="sidebar sidebar-hidden">
-		<header class="sidebar-header">
-			<span class="sidebar-title">Oleh Yaroshchuk</span>
-			<span class="sidebar-close-btn" data-tooltip="Close">
-				<i class="fas fa-times"></i>
-			</span>
-		</header>
-		<div class="sidebar-container">
-			<span>
-				<a href="/">Home</a>
-			</span>
-			<span>
-				<a href="/about">About</a>
-			</span>
-			<span>
-				<a href="/projects">Projects</a>
-			</span>
-			<span>
-				<a href="/contact">Contact</a>
-			</span>
-			<div class="mode-switch-wrapper" data-tooltip="Click to change mode">
-		    <label class="mode-switch" for="checkbox">
-			    <input type="checkbox" id="checkbox" class="mode-switch-input"/>
-		  	  <div class="slider round"></div>
-			  </label>
-			</div>
-		</div>
-	</div>
-
-	<div class="cookies-message">
-		<p>This site used cookies and similar technologies to improve the browsing experience. Please, click the "Close" button and accept Cookie policy. They are not written, but you can trust me) </p>
-		<span class="btn cookies-accept-btn">Close</span>
-	</div>
-
+	<script defer src="../js/switcher.js"></script>
+	<script defer src="../js/header.js"></script>
+	<script defer src="../js/sidebar.js"></script>
+	<script defer src="../js/inline-link.js"></script>
+	<script defer src="../js/footer.js"></script>
 	<script src="../js/index.js"></script>
 </body>
 
