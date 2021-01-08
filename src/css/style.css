@@ -12,7 +12,7 @@
 	--nav-font: 'Merriweather Sans', sans-serif;
 	--mode-symbol: "\f185";
 	--mode-symbol-color: #f9d71c;
-	--entry-section-bg: url(../img/entry-section-day.jpg);
+	--entry-section-bg: url(../img/entry-section-day.webp);
 	--entry-section-btn-color: #53657e;
 	--titles-font: 'Ropa Sans', sans-serif;
 	--btn-font: 'Kanit', sans-serif;
@@ -33,7 +33,7 @@
 	--bg-color-alt: #1b1b32;
 	--mode-symbol: "\f186";
 	--mode-symbol-color: #C0C0C0;
-	--entry-section-bg: url(../img/entry-section-night.jpg);
+	--entry-section-bg: url(../img/entry-section-night.webp);
 	--entry-section-btn-color: #7e5453;
 	--btn-rev-color: #F2F6ED;
 	--link-underline-color: #ffff32;
