@@ -37,6 +37,14 @@ inpageLink.map(el => el.onclick = e => {
 window.addEventListener('load', () => {
 	/*removes preloader when page is loaded*/
 	document.getElementsByTagName('page-preloader')[0].remove();
+}, {
+	passive: true,
+});
+
+document.addEventListener('touchstart', () => {
+
+}, {
+	passive: true,
 });
 
 /**
