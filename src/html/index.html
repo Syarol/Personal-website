@@ -15,13 +15,13 @@
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="English">
 	<meta name="author" content="Oleh Yaroshchuk">
-
-	<link rel="manifest" href="/manifest.json">
-	<link href="https://fonts.googleapis.com/css?family=Russo+One|Merriweather+Sans|Kanit|Ropa+Sans|Roboto&display=swap" rel="stylesheet"> 
+	
+	<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+	<link href="https://fonts.googleapis.com/css?family=Russo+One|Merriweather+Sans|Kanit|Ropa+Sans|Roboto&display=swap" rel="stylesheet" rel="preconnect"> 
 
 	<link href="../css/style.css" rel="stylesheet">
 
-	<script src="https://kit.fontawesome.com/05d8a5315c.js"></script>
+	<script src="https://kit.fontawesome.com/05d8a5315c.js" rel="preconnect"></script>
 </head>
 
 <body ontouchstart="">
@@ -46,17 +46,41 @@
 			<hr class="divider">
 			<p>My name is at the top left corner. I'm a <span class="highlight">Web developer</span> living in <inline-link to="https://en.wikipedia.org/wiki/Lutsk">Lutsk, Ukraine 🇺🇦</inline-link>. Currently, I'm a Master's student in the Software Engineering program at Lutsk National Technical University.</p>
 			<p>I love building different UI effects, animations, and just write code.</p>
-			<a class="btn" href="/about">Read more</a>
+			<a class="btn" href="/about">Learn more about me</a>
 		</section>
 
 		<section class="content-section projects-section" id="projects-section">
 			<h2 class="section-header">My works</h2>
 			<hr class="divider">
 			<div class="projects-container">
-				<project-card image="img/preview-marksave.webp" title="Marksave" stack="Vue.js, Node.js, MongoDB, Redis" link="https://marksave.onrender.com/" ></project-card>
-				<project-card image="img/preview-shagram.webp" title="Shagram" stack="C#" link="https://github.com/Syarol/Shagram" ></project-card>
-				<project-card image="img/preview-whereisamovie.webp" title="&quot;Where is a movie&quot; bot" stack="C#, Redis" link="https://t.me/whereisamoviebot" ></project-card>
-				<project-card image="img/preview-oasis.webp" title="Oasis Bookstore" stack="Node.js, MySQL, Redis" link="https://mysterious-thicket-22919.herokuapp.com" ></project-card>
+				<project-card 
+					image="img/preview-marksave.webp" 
+					alt="Bookmark symbol"
+					title="Marksave" 
+					stack="Vue.js, Node.js, MongoDB, Redis" 
+					link="https://marksave.onrender.com/" 
+				></project-card>
+				<project-card 
+					image="img/preview-shagram.webp" 
+					alt="Telegram logo"
+					title="Shagram" 
+					stack="C#" 
+					link="https://github.com/Syarol/Shagram" 
+				></project-card>
+				<project-card 
+					image="img/preview-whereisamovie.webp" 
+					alt="Astronaut who eats popcorn"
+					title="&quot;Where is a movie&quot; bot" 
+					stack="C#, Redis" 
+					link="https://t.me/whereisamoviebot" 
+				></project-card>
+				<project-card 
+					image="img/preview-oasis.webp" 
+					alt="Logo in the form of an open book"
+					title="Oasis Bookstore" 
+					stack="Node.js, MySQL, Redis" 
+					link="https://mysterious-thicket-22919.herokuapp.com" 
+				></project-card>
 			</div>
 			<a class="btn" href="/projects">See all</a>
 		</section>

@@ -17,6 +17,7 @@
 			let elTemplate = template.replace('{link}', this.attributes.link.value);
 			elTemplate = elTemplate.replace('{title}', this.attributes.title.value);
 			elTemplate = elTemplate.replace('{image}', this.attributes.image.value);
+			elTemplate = elTemplate.replace('{alt}', this.attributes.alt.value);
 			elTemplate = elTemplate.replace('{stack}', this.attributes.stack.value);
 			elTemplate = templateToHTML(elTemplate);
 				

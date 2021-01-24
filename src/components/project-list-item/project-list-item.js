@@ -18,6 +18,7 @@
 			let elTemplate = template.replace('{link}', this.attributes.link.value);
 			elTemplate = elTemplate.replace('{title}', this.attributes.title.value);
 			elTemplate = elTemplate.replace('{thumbnailURL}', this.attributes.thumbnail.value);
+			elTemplate = elTemplate.replace('{alt}', this.attributes.alt.value);
 			elTemplate = elTemplate.replace('{description}', this.attributes.description.value);
 			elTemplate = elTemplate.replace('{tags}', tags);
 			elTemplate = templateToHTML(elTemplate);
