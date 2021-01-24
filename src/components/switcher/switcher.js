@@ -1,5 +1,5 @@
 (async () => {
-	let switcherTemplate = await fetch('/html/templates/switcher.html', {
+	let switcherTemplate = await fetch('/components/switcher/switcher.html', {
 		method: 'GET',
 	})
 		.then(res => res.text())

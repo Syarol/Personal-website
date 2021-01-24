@@ -34,9 +34,10 @@ inpageLink.map(el => el.onclick = e => {
 	scrollTo(offset);
 });
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 	/*removes preloader when page is loaded*/
-	document.getElementsByTagName('page-preloader')[0].remove();
+	console.log('f');
+	//document.getElementsByTagName('page-preloader')[0].remove();
 });
 
 /**

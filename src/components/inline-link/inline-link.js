@@ -3,7 +3,7 @@
 		return new DOMParser().parseFromString(template, 'text/html').head.firstElementChild.content;
 	};
 
-	let template = await fetch('/html/templates/inline-link.html', {
+	let template = await fetch('/components/inline-link/inline-link.html', {
 		method: 'GET',
 	})
 		.then(res => res.text())

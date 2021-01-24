@@ -2,7 +2,7 @@
   * Dependencies
 **/
 
-const {url, dbName} = require('./config.js'); //getting access to environment variables
+const { DB_URL, DB_NAME } = require('./config.js'); //getting access to environment variables
 const pug = require('pug');
 const path = require('path');
 const router = require('express').Router();
@@ -15,8 +15,13 @@ const MongoClient = require('mongodb').MongoClient;
 let projects;
 
 // Use connect method to connect to the server
-MongoClient.connect(url, {useNewUrlParser: true}, function(err, database) {
-	projects = database.db(dbName).collection('projects'); //gets collection from db
+MongoClient.connect(DB_URL, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+}, function(err, database) {
+	projects = database.db(DB_NAME).collection('projects'); //gets collection from db
+
+	console.log(projects);
 });
 
 /**
@@ -39,6 +44,7 @@ router.get('/about', function(req, res){
 });
 
 router.get('/projects', function(req, res){
+	//res.sendFile(path.join(__dirname + '/html/projects.html'));
 	//gets all elements of collection and render them 
 	projects.find({}).toArray(function(err, docs) {
 		res.render(path.join(__dirname + '/views/projects.pug'), {

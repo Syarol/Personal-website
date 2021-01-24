@@ -9,7 +9,7 @@ require('dotenv').config(); //if commented then - replaced with '-r dotenv/confi
 **/
 
 module.exports = {
-	port: process.env.PORT,
-	url: process.env.DB_URL, //db connection url
-	dbName: process.env.DB_NAME
+	PORT: process.env.PORT,
+	DB_URL: process.env.DB_URL, //db connection url
+	DB_NAME: process.env.DB_NAME
 };

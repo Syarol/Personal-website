@@ -1,0 +1,18 @@
+<template>
+	<style>
+		@import "/components/project-list-item/project-list-item.css";
+	</style>
+
+	<div class="projects-list-item">
+		<img class="projects-list-item-img" src="{thumbnailURL}">
+		<div class="project-info">
+			<h3 class="project-title">{title}</h3>
+			<ul class="project-tags-list">{tags}</ul>
+			<p class="project-description">{description}</p>
+			<span class="link text-link">
+				<a href="{link}">Take a look</a> 
+				<div class="link-underline"></div>
+			</span>
+		</div>
+	</div>
+</template>

@@ -1,5 +1,5 @@
 (async () => {
-	let headerTemplate = await fetch('/html/templates/header.html', {
+	let headerTemplate = await fetch('/components/header/header.html', {
 		method: 'GET',
 	})
 		.then(res => res.text())

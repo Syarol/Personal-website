@@ -3,7 +3,7 @@
 		return new DOMParser().parseFromString(template, 'text/html').head.firstElementChild.content;
 	};
 
-	let template = await fetch('/html/templates/preloader.html', {
+	let template = await fetch('/components/preloader/preloader.html', {
 		method: 'GET',
 	})
 		.then(res => res.text())

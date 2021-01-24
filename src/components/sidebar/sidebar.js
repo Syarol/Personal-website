@@ -1,5 +1,5 @@
 (async () => {
-	let sidebarTemplate = await fetch('/html/templates/sidebar.html', {
+	let sidebarTemplate = await fetch('/components/sidebar/sidebar.html', {
 		method: 'GET',
 	})
 		.then(res => res.text())

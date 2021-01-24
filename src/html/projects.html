@@ -33,30 +33,15 @@
 	<custom-sidebar>
 		<i slot="close-btn" class="fas fa-times"></i>
 	</custom-sidebar>
-
-	<main class="contact-main">
-		<section class="content-section contact-section">
-			<h2 class="section-header">Contact me</h2>
+	
+	<main class="projects-main">
+		<section class="content-section">
+			<h1 class="section-header">My works</h1>
 			<hr class="divider">
-			<p>Interested in working together, or have any questions or offers? Great! Get in touch, I'm friendly.</p>
-			<div>
-				<inline-link to="mailto:oleh.yaroshchuk@yahoo.com">oleh.yaroshchuk@yahoo.com</inline-link>
-				<i class="far fa-copy copy-email-btn" data-tooltip="Click to copy email"></i>
-			</div>
-			<p>Or you may try one of this ways:</p>
-			<div class="links-container">
-				<inline-link to="https://www.facebook.com/oleh.yaroshchuk">Facebook</inline-link>
-				<div class="vr"></div>
-				<inline-link to="https://twitter.com/oleh_yaroshchuk">Twitter</inline-link>
-				<div class="vr"></div>
-				<inline-link to="https://t.me/oleh_yaroshchuk">Telegram</inline-link>
-				<div class="vr"></div>
-				<inline-link to="https://github.com/Syarol">Github</inline-link>
-				<div class="vr"></div>
-				<inline-link to="https://www.instagram.com/oleh_yaroshchuk">Instagram</inline-link>
-				<div class="vr"></div>
-				<inline-link to="https://www.linkedin.com/in/oleh-yaroshchuk">LinkedIn</inline-link>
-			</div>
+			<p>There are some of my works. They are not great, but not terrible (I hope so). Please, take a look at them.</p>
+		</section>
+		<section class="projects-list">
+			<project-list-item link="#" thumbnail="#" title="Shagram" description="Telergam client" tags="C#,Vue.js"></project-list-item>
 		</section>
 	</main>
 	
@@ -65,9 +50,9 @@
 	</custom-footer>
 
 	<script defer src="./../components/switcher/switcher.js"></script>
+	<script defer src="./../components/project-list-item/project-list-item.js"></script>
 	<script defer src="./../components/header/header.js"></script>
 	<script defer src="./../components/sidebar/sidebar.js"></script>
-	<script defer src="./../components/inline-link/inline-link.js"></script>
 	<script defer src="./../components/footer/footer.js"></script>
 	<script src="../js/index.js"></script>
 </body>
