@@ -36,8 +36,7 @@ inpageLink.map(el => el.onclick = e => {
 
 window.addEventListener('load', () => {
 	/*removes preloader when page is loaded*/
-	console.log('f');
-	//document.getElementsByTagName('page-preloader')[0].remove();
+	document.getElementsByTagName('page-preloader')[0].remove();
 });
 
 /**

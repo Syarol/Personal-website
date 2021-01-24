@@ -62,6 +62,7 @@
 .project-description {
 	font-family: var(--text-font);
 	margin: 5px 0;
+	line-height: 1.25;
 	/*align-self: start;*/
 }
 

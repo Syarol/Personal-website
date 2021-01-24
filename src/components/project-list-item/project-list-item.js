@@ -13,11 +13,8 @@
 		constructor() {
 			super();
 			//if (!this) return console.error('"Project-list-item" doesn\'t received all needed data!');
-console.log(this.attributes.tags.value);
-console.log(this.attributes.tags.value.split(','));
 
 			let tags = this.attributes.tags.value.split(',').map(el => '<li>'+el+'</li>').join('');
-console.log(tags);
 			let elTemplate = template.replace('{link}', this.attributes.link.value);
 			elTemplate = elTemplate.replace('{title}', this.attributes.title.value);
 			elTemplate = elTemplate.replace('{thumbnailURL}', this.attributes.thumbnail.value);
