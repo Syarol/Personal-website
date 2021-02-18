@@ -13,7 +13,6 @@
 	--nav-font: 'Merriweather Sans', sans-serif;
 	--mode-symbol: "\f185";
 	--mode-symbol-color: #f9d71c;
-	--entry-section-bg: url(../img/entry-section-day.webp);
 	--entry-section-btn-color: #53657e;
 	--titles-font: 'Ropa Sans', sans-serif;
 	--btn-font: 'Kanit', sans-serif;
@@ -35,7 +34,6 @@
 	--highlight-text-color: #ed328c;
 	--mode-symbol: "\f186";
 	--mode-symbol-color: #C0C0C0;
-	--entry-section-bg: url(../img/entry-section-night.webp);
 	--entry-section-btn-color: #7e5453;
 	--btn-rev-color: #F2F6ED;
 	--link-underline-color: #ffff32;
@@ -43,6 +41,46 @@
 	--move-top-btn-color: #5437a4;
 	--sidebar-link-color: #bbb5b5;
 	--sidebar-link-color-alt: #818cab;
+}
+
+@media screen and (max-width: 480px) {
+	:root {
+		--entry-section-bg: url(../img/entry-section-day_phone.webp);
+	}
+
+	:root[data-mode="dark"] {
+		--entry-section-bg: url(../img/entry-section-night_phone.webp);
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	:root {
+		--entry-section-bg: url(../img/entry-section-day_tablet.webp);
+	}
+
+	:root[data-mode="dark"] {
+		--entry-section-bg: url(../img/entry-section-night_tablet.webp);
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	:root {
+		--entry-section-bg: url(../img/entry-section-day_laptop.webp);
+	}
+
+	:root[data-mode="dark"] {
+		--entry-section-bg: url(../img/entry-section-night_laptop.webp);
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	:root {
+		--entry-section-bg: url(../img/entry-section-day.webp);
+	}
+
+	:root[data-mode="dark"] {
+		--entry-section-bg: url(../img/entry-section-night.webp);
+	}
 }
 
 body, html {
