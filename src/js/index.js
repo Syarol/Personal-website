@@ -65,5 +65,5 @@ window.addEventListener('sidebar-close', () => {
 
 if (document.getElementsByClassName('home-main')[0] || document.getElementsByClassName('contact-main')[0]) {
 	/*Saves email address to clipboard*/
-	document.getElementsByClassName('copy-email-btn')[0].onclick = () => navigator.clipboard.writeText('oleh.yaroshchuk@yahoo.com');
+	document.getElementsByClassName('copy-email-btn')[0].onclick = () => navigator.clipboard.writeText('oleh.yaroshchuk@outlook.com');
 }
