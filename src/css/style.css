@@ -235,6 +235,7 @@ main {
 	font-size: 1.4em;
 	border-color: #DEDEDE;
 	color: #DEDEDE;
+	background-color: transparent;
 }
 
 .check-work-btn:hover {
@@ -242,11 +243,16 @@ main {
 	background-color: #DEDEDE;
 }
 
-.check-work-btn .fa-arrow-right {
+.check-work-btn::after {
+	content: "\f061";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 700;
+	margin-left: 10px;
 	transition: .75s;
+	display: inline-block;
 }
 
-.check-work-btn:hover .fa-arrow-right {
+.check-work-btn:hover::after {
 	transform: rotate(90deg);
 }
 
