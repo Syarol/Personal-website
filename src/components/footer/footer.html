@@ -2,8 +2,8 @@
 	<footer class="site-footer">
 		<button class="move-top-btn" data-tooltip="Go to top" aria-label="Go to top">
 			<slot name="arrow-up"></slot>
-		</div>
-		<span class="footer-text">Build with <span class="heart-icon">❤️</span> and 💻. © Oleh Yaroshchuk 2019 - 2021</span>
+		</button>
+		<span class="footer-text">Build with ❤️ and 💻. © Oleh Yaroshchuk 2019 - 2022</span>
 	</footer>
 
 	<style>
@@ -38,16 +38,14 @@
 			cursor: pointer;
 			margin-top: -17px;
 			background-color: var(--move-top-btn-color);
+			border-color: var(--font-color);
+			color: var(--font-color);
 		}
 
 		.footer-text {
 			font-size: .8em;
 			font-family: var(--text-font);
 			margin: auto;
-		}
-
-		.heart-icon {
-			color: #E81224;
 		}
 	</style>
 </template>
