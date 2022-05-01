@@ -53,7 +53,7 @@ function watchAll(){
 gulp.task('nodemon', function(cb) {
 	var called = false;
 	return nodemon({
-		script: 'app.js',
+		script: 'index.js',
 		ignore: [
 		'gulpfile.js',
 		'node_modules/'
