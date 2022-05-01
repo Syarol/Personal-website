@@ -12,10 +12,10 @@
 	class InlineLink extends HTMLElement {
 		constructor() {
 			super();
-			if (!this.textContent) return console.error('"Inline-link" doesn\'t received all needed data!');
+			if (!this.innerHTML) return console.error('"Inline-link" doesn\'t received all needed data!');
 
 			let elTemplate = template.replace('{link}', this.attributes.to.value);
-			elTemplate = elTemplate.replace('{text}', this.textContent);
+			elTemplate = elTemplate.replace('{text}', this.innerHTML);
 			elTemplate = templateToHTML(elTemplate);
 				
 			const shadowRoot = this.attachShadow({mode: 'open'});
